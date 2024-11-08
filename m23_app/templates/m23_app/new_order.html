@@ -1,0 +1,72 @@
+{% extends "m23_app/base.html" %}
+
+{% block content %}
+
+<div>
+    <h4><a class="btn btn-dark btn-sm" href="{% url 'm23_app:index' %}">Назад</a></h4>
+</div>
+<br/>
+<small>
+    <div class="card bg-dark">
+        <div class="card-header text-white bg-dark">
+            ЗАПОЛНИТЕ АНКЕТУ
+        </div>
+        <div class="card-body">
+            <form action="{% url 'm23_app:new_order' %}" method="POST">
+                {% csrf_token %}
+                <div>
+                    <label for="name"></label>
+                    <p class="nav-link text-light">Ваше имя :</p>
+                    <input type="text"
+                           name="name"
+                           autocapitalize="words"
+                           title="Введите своё имя"
+                           maxlength="30"
+                           required>
+                </div>
+                <div>
+                    <label for="phone_number"></label>
+                    <p class="nav-link text-light"> Телефон (+7 _________ ) :</p>
+                    <input type="tel"
+                           name="phone_number"
+                           maxlength="10"
+                           pattern="[0-9]{10}"
+                           title="Введите 10 цифр номера (без '+7' или '8')"
+                           required>
+                </div>
+                <div>
+                    <label for="car_model"></label>
+                    <p class="nav-link text-light">Марка и модель авто : </p>
+                    <input type="text"
+                           name="car_model"
+                           title="Введите название вашего автомобиля"
+                           maxlength="30"
+                           required>
+                </div>
+                <div><label for="question"></label>
+                    <p class="nav-link text-light">Какой вопрос :</p>
+                    <textarea type="text"
+                              style="width: 350px; height: 60px;"
+                              name="question"
+                              title="Введите интересующую вас услугу или вопрос"
+                              maxlength="300"
+                              required></textarea>
+                </div>
+                <div>
+                    <br/>
+                    <div class="g-recaptcha"
+                         data-sitekey="6LeagUgqAAAAANmi0JMWh041gqUVE4f8XCodNzaH"
+                         data-action="login"
+                         required></div>
+                </div>
+                <div>
+                    <br/>
+                    <button name="submit" class="btn btn-outline-warning">
+                        Подтвердить запись
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</small>
+{% endblock content %}

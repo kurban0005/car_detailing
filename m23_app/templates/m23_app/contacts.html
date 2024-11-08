@@ -1,0 +1,46 @@
+{% extends "m23_app/base.html" %}
+
+{% block content %}
+<div class="pb-2 mb-2 border-bottom">
+    <a class="btn btn-dark" style="color:#DAA520" href="{% url 'm23_app:new_order' %}">
+        ЗАПИСАТЬСЯ
+    </a>
+</div>
+
+<div>
+    <h4><a class="btn btn-dark btn-sm" href="{% url 'm23_app:index' %}">Назад</a></h4>
+</div>
+<br/>
+<div class="card bg-dark">
+    <div class="card-body">
+        <h5 class="card-title nav-link text-light">НАШИ КОНТАКТЫ :</h5>
+        <p class="nav-link text-light">Телефон : +7 962 533 0005</p>
+        <p class="nav-link text-light">WhatsApp : +7 962 533 0005</p>
+        <p class="nav-link text-light">Email : autoufa.detailing@gmail.com</p>
+        <p class="nav-link text-light">г. Уфа : д. Суровка, ул. Виноградная, 1к3</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md">
+            <p><a class="btn btn-outline-light btn-sm" href="https://go.2gis.com/ub4j0">
+                Мы в 2ГИС</a>
+            </p>
+            <p><a class="btn btn-outline-light btn-sm" href="http://t.me/m23detailingufa">
+                Telegram канал</a>
+            </p>
+            <p><a class="btn btn-outline-light btn-sm" href="https://t.me/m23_detaling_bot">
+                Telegram бот</a>
+            </p>
+        </div>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d812.4930708389328!2d55.90711967742323!3d54.83132444042947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1726737024254!5m2!1sru!2sru"
+                    width="370"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+
+            </iframe>
+        </div>
+
+    </div>
+</div>
+{% endblock content %}

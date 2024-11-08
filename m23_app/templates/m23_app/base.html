@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>M23 Detailing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.google.com/recaptcha/enterprise.js?render='6LeagUgqAAAAANmi0JMWh041gqUVE4f8XCodNzaH'"
+            async defer></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LeagUgqAAAAANmi0JMWh041gqUVE4f8XCodNzaH', {action: 'login'})
+                .then(function(token) {
+                   document.getElementById('my_form').submit();
+                });
+        });
+    </script>
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body bgcolor="2F4F4F">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 border">
+    <div class="container-fluid">
+
+        <a class="navbar-brand"
+           style="color:#DAA520"
+           href="{% url 'm23_app:index' %}">M23</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'm23_app:services' %}">
+                        Услуги</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'm23_app:info' %}">
+                        О нас</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'm23_app:contacts' %}">
+                        Контакты</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'm23_app:new_order' %}">
+                        Записаться</a>
+                </li>
+            </ul>
+            <span class="navbar-text" style="color:#DAA520">
+                    M23 DETAILING CENTER
+                </span>
+        </div>
+
+    </div>
+</nav>
+
+
+<main class="container">
+    <div class="pb-2 mb-2 border-bottom">
+        {% block page_header %}
+        <a class="nav-link text-dark" href="{% url 'm23_app:index' %}">
+            <h1>M23</h1>
+            <h3>DETAILING CENTER | UFA</h3>
+        </a>
+        {% endblock page_header %}
+    </div>
+    {% block content %}
+    {% endblock content %}
+</main>
+</body>
+</html>

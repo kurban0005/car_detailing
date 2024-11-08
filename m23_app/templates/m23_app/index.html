@@ -1,0 +1,9 @@
+{% extends "m23_app/base.html" %}
+{% block content %}
+<div class="pb-2 mb-2 border-bottom">
+    <a class="btn btn-dark" style="color:#DAA520" href="{% url 'm23_app:new_order' %}">ЗАПИСАТЬСЯ</a>
+</div>
+<h5><a class="btn btn-dark" href="{% url 'm23_app:services' %}">Услуги</a></h5>
+<h5><a class="btn btn-dark" href="{% url 'm23_app:info' %}">О нас</a></h5>
+<h5><a class="btn btn-dark" href="{% url 'm23_app:contacts' %}">Контакты</a></h5>
+{% endblock content %}

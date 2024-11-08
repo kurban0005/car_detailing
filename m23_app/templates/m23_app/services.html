@@ -1,0 +1,29 @@
+{% extends "m23_app/base.html" %}
+
+{% block content %}
+<div class="pb-2 mb-2 border-bottom">
+    <a class="btn btn-dark" style="color:#DAA520" href="{% url 'm23_app:new_order' %}">
+    ЗАПИСАТЬСЯ
+    </a>
+</div>
+
+<div>
+    <h4><a class="btn btn-dark btn-sm" href="{% url 'm23_app:index' %}">Назад</a></h4>
+</div>
+<br/>
+<div class="card bg-dark">
+    <div class="card-body">
+        <h5 class="card-title nav-link text-light">НАШИ УСЛУГИ :</h5>
+        <p class="card-text nav-link text-light">- Тонирование</p>
+        <p class="card-text nav-link text-light">- Бронирование</p>
+        <p class="card-text nav-link text-light">- Химчистка</p>
+        <p class="card-text nav-link text-light">- Оклейка кузова </p>
+        <p class="card-text nav-link text-light">- Антихром</p>
+        <p class="card-text nav-link text-light">- Смена цвета</p>
+        <p class="card-text nav-link text-light">- Полировка</p>
+        <p class="card-text nav-link text-light">- Керамика / Жидкое стекло</p>
+        <p class="card-text nav-link text-light">- Установка доп. оборудования</p>
+        <p class="card-text nav-link text-light">- Шумоизоляция</p>
+    </div>
+</div>
+{% endblock content %}
